@@ -1,11 +1,17 @@
-﻿namespace TrabalhoClasses.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
+
+namespace TrabalhoClasses.Models
 {
     internal class Celular : Dispositivo
     {
         public Celular() { }
 
+        [Display(Name = "Bateria")]
         public int Bateria { get; set; }
 
+        [Required(ErrorMessage = "O Sistema Operacional é obrigatório", AllowEmptyStrings = false)]
+        [Display(Name = "Sistema Operacional")]
         public string SistemaOperacional { get; set; }
 
         public override void AumentarBrilho(int valor)

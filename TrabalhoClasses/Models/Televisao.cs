@@ -1,9 +1,13 @@
-﻿namespace TrabalhoClasses.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace TrabalhoClasses.Models
 {
     internal class Televisao : Dispositivo
     {
         public Televisao() { }
 
+        [Required]
+        [Display(Name = "Modo de Exibição")]
         private string modo;
 
         public string Modo
